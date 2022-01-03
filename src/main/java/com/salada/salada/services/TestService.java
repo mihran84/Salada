@@ -12,6 +12,7 @@ public class TestService {
     @GetMapping("/")
     public String get(){
         return "hi" ;
+
     }
 
 }
