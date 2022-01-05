@@ -15,4 +15,10 @@ public class TestService {
 
     }
 
+    @GetMapping("/all")
+    public String getAll(){
+        return "hi all" ;
+
+    }
+
 }
