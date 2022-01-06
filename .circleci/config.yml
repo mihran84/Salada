@@ -1,9 +1,4 @@
-# Java Gradle CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-java/ for more details
-#
-orbs:
-  maven: circleci/maven@0.0.12
+
 version: 2
 jobs:
   build:
@@ -13,4 +8,4 @@ jobs:
 
     steps:
       - checkout
-      - run: ./mvnw
+    
