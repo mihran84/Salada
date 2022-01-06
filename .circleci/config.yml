@@ -2,7 +2,8 @@
 #
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
-
+orbs:
+  maven: circleci/maven@0.0.12
 version: 2
 jobs:
   build:
