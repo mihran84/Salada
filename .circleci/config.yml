@@ -1,8 +1,23 @@
-orbs:
-  maven: circleci/maven@x.y
 version: 2.1
+executors:
+  my-custom-executor:
+    docker:
+      - image: cimg/base:stable
+        auth:
+          # ensure you have first added these secrets
+          # visit app.circleci.com/settings/project/github/mihran84/salada/environment-variables
+          username: $DOCKER_HUB_USER
+          password: $DOCKER_HUB_PASSWORD
+jobs:
+  salad-job:
+
+    executor: my-custom-executor
+    steps:
+      - checkout
+      - run: |
+         command: '-X verify'
+
 workflows:
-  maven_test:
+  my-custom-workflow:
     jobs:
-      - maven/test:
-          command: '-X verify'
+      - salad-job
