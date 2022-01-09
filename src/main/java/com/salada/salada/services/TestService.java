@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/service")
 public class TestService {
 
-    @Value("#{name}")
+    @Value("${name:whatever}")
     private  String name ;
     @GetMapping("/")
     public String get(){
